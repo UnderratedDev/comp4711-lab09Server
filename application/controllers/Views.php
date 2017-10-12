@@ -11,7 +11,7 @@ class Views extends Application {
         $tasks = $this->tasks->all();   // get all the tasks
         $this->data['content'] = 'Ok'; // so we don't need pagebody
         $this->data['leftside'] = $this->makePrioritizedPanel($tasks);
-        // $this->data['rightside'] = $this->makeCategorizedPanel($tasks);
+        $this->data['rightside'] = $this->makeCategorizedPanel($tasks);
 
         $this->render('template_secondary'); 
     }
@@ -23,7 +23,7 @@ class Views extends Application {
                 $undone[] = $task;
         }
         // order them by priority
-        usort($undone, array("Views", "orderByPriority"));
+        usort($undone, 'orderByPriority');
         // substitute the priority name
         foreach ($undone as $task)
             $task -> priority = $this->app->priority ($task -> priority);
@@ -35,15 +35,23 @@ class Views extends Application {
         return $this->parser->parse('by_priority', $parms, true);
     }
     
-    // return -1, 0, or 1 of $a's priority is higher, equal to, or lower than $b's
-    function orderByPriority($a, $b)
+    function makeCategorizedPanel($tasks)
     {
-        if ($a->priority > $b->priority)
-            return -1;
-        elseif ($a->priority < $b->priority)
-            return 1;
-        else
-            return 0;
+        $parms = ['display_tasks' => $this->tasks->getCategorizedTasks()];
+        return $this->parser->parse('by_category', $parms, true);
     }
-    
+
 }
+
+// return -1, 0, or 1 of $a's priority is higher, equal to, or lower than $b's
+function orderByPriority($a, $b)
+{
+    if ($a->priority > $b->priority)
+        return -1;
+    elseif ($a->priority < $b->priority)
+        return 1;
+    else
+        return 0;
+}
+
+?>
