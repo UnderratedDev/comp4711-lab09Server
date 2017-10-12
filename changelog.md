@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## [Unreleased] - SC
 ### Added
+- Completed Job 2 (Shows tasks in table, and number of tasks remaining)
+
+## [Unreleased] - SC
+### Added
 - changelog.md
 - Tasks model
 
