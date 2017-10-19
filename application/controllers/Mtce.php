@@ -9,7 +9,7 @@ class Mtce extends Application {
 
     public function index()
     {
-        $this->page(1);
+        $this->page (1);
     }
 
     // Show a single page of todo items

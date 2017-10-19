@@ -12,6 +12,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - Role specific maintenance list: list appears different to guests and owners
 
 ## [Unreleased] - YR 
+### Update
+- controller/views.php complete function which allows for the completion of tasks
+
+### Fixed
+- core/memory_model to fix php error
+
+## [Unreleased] - YR 
 ### Added
 - views/itemnav.php
 
