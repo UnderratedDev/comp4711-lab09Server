@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## [Unreleased] - SC
 ### Added
+- Roles controller
+
+### Changed
+- Changed project to use sessions
+
+## [Unreleased] - SC
+### Added
 - Mtce (Maintanence Controller)
 - views/itemlist.php
 
