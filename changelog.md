@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
+## [Unreleased] - YR 
+### Update
+- Size, group, and status in form to add a new todo item
+
 ## [Unreleased] - SC
 ### Added
 - Mtce add/edit/delete methods
@@ -10,7 +14,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ### Changed
 - Fixed some core/memory_model bugs
 - Fixed some models/App bugs
-
 
 ## [Unreleased] - SC
 ### Added
