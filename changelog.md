@@ -2,11 +2,20 @@
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+
 ## [Unreleased] - SC
+### Added
+- Mtce (Maintanence Controller)
+- views/itemlist.php
+
+### Fixed
+- Bootstrap bug
+
+## [Unreleased] - YR
 ### Added
 - Jobs.md
 - Added parsedown library
-- Helpme contorller
+- Helpme controller
 
 ## [Unreleased] - SC
 ### Changed
