@@ -11,6 +11,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ### Fixed
 - Bootstrap bug
 
+## [Unreleased] - YR
+### Added
+- Jobs.md
+- Added parsedown library
+- Helpme controller
+
 ## [Unreleased] - SC
 ### Changed
 - Fixed template_secondary to have menubar and copyright
