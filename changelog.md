@@ -10,6 +10,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ### Updated
 - view/itemlist.php
 - mtce controller for pagination handling
+- mtce controller reworking to work with merge conflict (moved role code into show_page)
+
+## [Unreleased] - SC
+### Added
+- Roles controller
+
+### Changed
+- Changed project to use sessions
 
 ## [Unreleased] - SC
 ### Added
