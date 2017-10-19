@@ -22,7 +22,10 @@ class Mtce extends Application {
         foreach ($tasks as $task) { 
             if (!empty($task->status))
                 $task->status = $this->app->status($task->status);
-            $result .= $this->parser->parse('oneitem',(array)$task,true);
+            if ($role == ROLE_OWNER)
+                $result .= $this->parser->parse('oneitemx', (array) $task, true);
+            else
+                $result .= $this->parser->parse('oneitem',(array)$task,true);
         }
 
         // and then pass them on
@@ -49,6 +52,10 @@ class Mtce extends Application {
                 break;
         }
         $this->data['pagination'] = $this->pagenav($num);
+        // INSERT next three lines
+        $role = $this->session->userdata('userrole');
+        if ($role == ROLE_OWNER) 
+                $this->data['pagination'] .= $this->parser->parse('itemadd',[], true);
         $this->show_page($tasks);
     }
 
