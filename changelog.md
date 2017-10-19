@@ -5,6 +5,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## [Unreleased] - SC
 ### Added
+- Mtce add/edit/delete methods
+
+### Changed
+- Fixed some core/memory_model bugs
+- Fixed some models/App bugs
+
+
+## [Unreleased] - SC
+### Added
 - Role specific maintenance list: list appears different to guests and owners
 
 ## [Unreleased] - YR 
