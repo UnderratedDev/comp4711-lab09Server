@@ -2,11 +2,59 @@
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+
+## [Unreleased] - YR 
+### Update
+- Size, group, and status in form to add a new todo item
+
 ## [Unreleased] - SC
+### Added
+- Mtce add/edit/delete methods
+
+### Changed
+- Fixed some core/memory_model bugs
+- Fixed some models/App bugs
+
+## [Unreleased] - SC
+### Added
+- Role specific maintenance list: list appears different to guests and owners
+
+## [Unreleased] - YR 
+### Update
+- controller/views.php complete function which allows for the completion of tasks
+
+### Fixed
+- core/memory_model to fix php error
+
+## [Unreleased] - YR 
+### Added
+- views/itemnav.php
+
+### Updated
+- view/itemlist.php
+- mtce controller for pagination handling
+- mtce controller reworking to work with merge conflict (moved role code into show_page)
+
+## [Unreleased] - SC
+### Added
+- Roles controller
+
+### Changed
+- Changed project to use sessions
+
+## [Unreleased] - SC
+### Added
+- Mtce (Maintanence Controller)
+- views/itemlist.php
+
+### Fixed
+- Bootstrap bug
+
+## [Unreleased] - YR
 ### Added
 - Jobs.md
 - Added parsedown library
-- Helpme contorller
+- Helpme controller
 
 ## [Unreleased] - SC
 ### Changed
