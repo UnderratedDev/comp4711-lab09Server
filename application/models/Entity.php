@@ -1,6 +1,6 @@
 <?php
 
-class Entity extends CI_Model {
+class Entity {
 
     // If this class has a setProp method, use it, else modify the property directly
     public function __set($key, $value) {
