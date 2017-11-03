@@ -13,19 +13,15 @@
       // Load CI instance normally
       $this->CI = &get_instance();
 
-      var_dump ($this -> CI);
-
       // make a dummy task
       // new task
       $this -> task = new Task;
     }
 
-    // You want to be a bastard
 
     public function testSetName () {
         $this -> task -> Task = "#1";
         $this->assertNotEquals("#1", $this -> task -> task);
-        // $this -> task -> __set("task"," #1");
     }
 
     
@@ -66,6 +62,6 @@
     }
    
     
-    // Enterprise, private prop, getters for all methods, accessor and a mutator, pair check, if have apperance of bannana property
+    
   }
 ?>
