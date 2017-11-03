@@ -1,7 +1,5 @@
 <?php
 
-require_once("./Entity.php");
-
 /* Represents a single task */
 class Task extends Entity {
     
@@ -15,7 +13,7 @@ class Task extends Entity {
         if (preg_match($regex, $value) === 1) {
             $this -> task = $value;
         } else {
-            throw new Exception("Invalid Task");
+            // throw new Exception("Invalid Task");
         }
     }
     
@@ -23,7 +21,7 @@ class Task extends Entity {
         if (is_int($value) && (0 < $value && $value < 4)) {
             $this -> priority = $value;
         } else {
-            throw new Exception("Invalid Priority");
+            // throw new Exception("Invalid Priority");
         }
     }
     
@@ -31,7 +29,7 @@ class Task extends Entity {
         if (is_int($value) && (0 < $value && $value < 4)) {
             $this -> size = $value;
         } else {
-            throw new Exception("Invalid Size");
+            // throw new Exception("Invalid Size");
         }
     }
     
@@ -39,7 +37,7 @@ class Task extends Entity {
         if (is_int($value) && (0 < $value && $value < 5)) {
             $this -> group = $value;    
         } else {
-            throw new Exception("Invalid Group");
+            // throw new Exception("Invalid Group");
         }
     }
     
