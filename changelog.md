@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ## [Unreleased] - YR
+### Changed
+- PHPunitxml.dist, to generate report
+
+### Added
+- Report generated
+
+## [Unreleased] - YR
 ### Added
 - TaskListTest, finished to test tasks class
 
