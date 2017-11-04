@@ -16,14 +16,34 @@
       // make a dummy task
       // new task
       $this -> task = new Task;
+      $this -> task -> task = "abc";
     }
 
 
     public function testSetName () {
-        $this -> task -> Task = "#1";
+        $this -> task -> TaskSet = "#1";
         $this->assertNotEquals("#1", $this -> task -> task);
     }
 
+    public function testSetNameLength64() {
+        $this -> task -> Task = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+        $this -> assertEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", $this -> task -> task);
+    }
+    
+    public function testSetNameLengthOver64() {
+        $this -> task -> Task = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+        $this -> assertNotEquals("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", $this -> task -> task);
+    }
+    
+    public function testSetNameLength1() {
+        $this -> task -> Task = "a";
+        $this -> assertEquals("a", $this -> task -> task);
+    }
+    
+    public function testSetNameLengthEmpty() {
+        $this -> task -> Task = "";
+        $this -> assertNotEquals("", $this -> task -> task);
+    }
     
     public function testSetPriority () {
         $this -> task -> Priority = "aaa";
