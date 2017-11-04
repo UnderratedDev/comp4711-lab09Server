@@ -21,7 +21,7 @@
 
 
     public function testSetName () {
-        $this -> task -> TaskSet = "#1";
+        $this -> task -> Task = "#1";
         $this->assertNotEquals("#1", $this -> task -> task);
     }
 
