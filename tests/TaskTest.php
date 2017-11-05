@@ -82,6 +82,11 @@
         $this->assertEquals("ABC", $this -> task -> task);
     }
    
+    public function testSetNameBoolean() {
+        $this -> task -> task = true;
+        $this->assertNotEquals(true, $this -> task -> task);
+    }
+    
     public function testSetNameGood () {
         $this -> task -> task = "abc";
         $this->assertEquals("abc", $this -> task -> task);
@@ -134,6 +139,11 @@
         $this->assertNotEquals(3, $this -> task -> priority);
     }
     
+    public function testSetPriorityBoolean () {
+        $this -> task -> priority = true;
+        $this->assertNotEquals(true, $this -> task -> priority);
+    }
+    
     public function testSetPriorityGood () {
         $this -> task -> priority = 3;
         $this->assertEquals(3, $this -> task -> priority);
@@ -142,18 +152,87 @@
     /*
      * Size Testing
      */
-    public function testSetSize () {
+    public function testSetSizeString () {
         $this -> task -> size = "4";
         $this->assertNotEquals("4", $this -> task -> size);
+    }
+
+    public function testSetSizeLower () {
+        $this -> task -> size = 1;
+        $this->assertEquals(1, $this -> task -> size);
+    }
+
+    public function testSetSizeHigher () {
+        $this -> task -> size = 3;
+        $this->assertEquals(3, $this -> task -> size);
+    }
+
+    public function testSetSizeLowerLimit () {
+        $this -> task -> size = 0;
+        $this->assertEquals(null, $this -> task -> size);
+    }
+
+    public function testSetSizeHigherLimit () {
+        $this -> task -> size = 4;
+        $this->assertNotEquals(4, $this -> task -> size);
+    }
+
+    public function testSetSizeDouble () {
+        $this -> task -> size = 2.0;
+        $this->assertNotEquals(2.0, $this -> task -> size);
+    }
+
+    public function testSetSizeBoolean () {
+        $this -> task -> size = true;
+        $this->assertNotEquals(true, $this -> task -> size);
+    }
+
+    public function testSetSizeGood () {
+        $this -> task -> size = 2;
+        $this->assertEquals(2, $this -> task -> size);
     }
 
     /*
      * Group Testing
      */
-    public function testSetGroup () {
+    public function testSetGroupString () {
         $this -> task -> group = "5";
         $this->assertNotEquals("5", $this -> task -> group);
     }
  
- }
+    public function testSetGroupLower () {
+        $this -> task -> group = 1;
+        $this->assertEquals(1, $this -> task -> group);
+    }
+
+    public function testSetGroupHigher () {
+        $this -> task -> group = 5;
+        $this->assertNotEquals(5, $this -> task -> group);
+    }
+    
+    public function testSetGroupHigherLimit () {
+        $this -> task -> group = 4;
+        $this->assertEquals(4, $this -> task -> group);
+    }
+
+    public function testSetGroupLowerLimit () {
+        $this -> task -> group = 0;
+        $this->assertEquals(null, $this -> task -> group);
+    }
+
+    public function testSetGroupDouble () {
+        $this -> task -> group = 2.0;
+        $this->assertNotEquals(2.0, $this -> task -> group);
+    }
+
+    public function testSetGroupBoolean () {
+        $this -> task -> group = true;
+        $this->assertNotEquals(true, $this -> task -> group);
+    }
+
+    public function testSetGroupGood () {
+        $this -> task -> group = 2;
+        $this->assertEquals(2, $this -> task -> group);
+    }
+}
 ?>
