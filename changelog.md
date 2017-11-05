@@ -3,6 +3,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
+## [Unreleased] - YR
+### Moved
+- Entity.php from application/models to application/core
+
+### Added
+- Get magic method to entity class
+- Get methods for each variable in task class
+- Require Once to Task class as Entity was moved to core folder from models
+
+## Changed
+- Autoload to remove Entity from models array
+- TaskTest to utilise the magic methods, as before they were using the methods directly
+
 ## [Unreleased] - SC
 ### Added
 - .travis.yml

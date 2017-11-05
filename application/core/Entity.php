@@ -1,6 +1,6 @@
 <?php
 
-class Entity {
+class Entity extends CI_Model {
 
     // If this class has a setProp method, use it, else modify the property directly
     public function __set($key, $value) {
@@ -11,13 +11,28 @@ class Entity {
         $method = 'set' . str_replace(' ', '', ucwords(str_replace(['-', '_'], ' ', $key)));
 
         if (method_exists($this, $method)) {
-                $this->$method($value);
-                return $this;
+            $this->$method($value);
+            return $this;
         }
 
         // Otherwise, just set the property value directly.
         $this->$key = $value;
         return $this;
+    }
+
+
+    public function __get($key) {
+        // if a get* method exists for this key,
+        // use that method to get this value.
+        $method = 'get' . str_replace(' ', '', ucwords(str_replace(['-', '_'], ' ', $key)));
+
+        if (method_exists($this, $method))
+            return $this->$method();
+
+        var_dump ($method);
+
+        // Otherwise, just return null
+        return null;
     }
 }
 
