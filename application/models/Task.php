@@ -12,7 +12,7 @@ class Task extends Entity {
 
     public function setTask($value) {
         $regex = "/^(\w){1,64}$/";
-        if (preg_match($regex, $value) === 1) {
+        if (is_string($value) && preg_match($regex, $value) === 1) {
             $this -> task = $value;
         } else {
             // throw new Exception("Invalid Task");
