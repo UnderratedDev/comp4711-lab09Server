@@ -3,6 +3,62 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
+## [Unreleased] - YR
+### Added
+- Many more tests in tasktest.php
+
+## [Unreleased] - YR
+### Changed
+- Fixed models/Task.php to check if string for task name
+
+### Added
+- Many more tests in tasktest.php
+
+## [Unreleased] - YR
+### Moved
+- Entity.php from application/models to application/core
+
+### Added
+- Get magic method to entity class
+- Get methods for each variable in task class
+- Require Once to Task class as Entity was moved to core folder from models
+
+## Changed
+- Autoload to remove Entity from models array
+- TaskTest to utilise the magic methods, as before they were using the methods directly
+
+## [Unreleased] - SC
+### Added
+- .travis.yml
+
+## [Unreleased] - YR
+### Changed
+- PHPunitxml.dist, to generate report
+
+### Added
+- Report generated
+
+## [Unreleased] - YR
+### Added
+- TaskListTest, finished to test tasks class
+
+## [Unreleased] - YR
+### Changed
+- Commented out exceptions in Task Class
+- Added entity to autoload
+### Added
+- TaskTest, finished to test task class
+
+## [Unreleased] - SC
+### Changed
+- Added exceptions to Task class
+- made properties public
+
+## [Unreleased] - SC
+### Added
+- Entity Class
+- Task class that extends entity and has setter methods
+
 ## [Unreleased] - YR 
 ### Update
 - Size, group, and status in form to add a new todo item
