@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## - YR
 ### Added
+- Store function in XML Model
+- Writing back to csv file
+
+### Changed
+- All folders and files to 775 and the data folder to 777
+
+## - YR
+### Added
 - XML Model
 - Load function in XML Model
 

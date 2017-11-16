@@ -37,7 +37,7 @@ class XML_Model extends Memory_Model
 		$this->_data = array(); // an array of objects
 		$this->fields = array(); // an array of strings
 		// and populate the collection
-		$this->load();
+        $this->load();
 	}
 
 	/**
@@ -51,17 +51,24 @@ class XML_Model extends Memory_Model
 		{
             // var_dump ($handle);
 
+            $first = true;
             foreach ($handle -> children() as $xRecord) {
                 $record = new $this -> _entity();
-
                 foreach ($xRecord -> children() as $value) {
+                    if ($first)
+                    {
+                        $this->_fields = array_keys((array)$xRecord);
+                        $first = false;
+                    }
+                    $this->_fields;
                     $record -> {$value -> getName ()} = (string) $value;
-                    array_push ($this -> _data, $record);
+                    $this -> _data[$record -> { $this ->_keyfield } ] = $record;
                 }
             }
-		}
+        }
+        // Children, get dom element, get parent, kill me
 		// --------------------
-		// rebuild the keys table
+        // rebuild the keys table
 		$this->reindex();
 	}
 
@@ -72,16 +79,24 @@ class XML_Model extends Memory_Model
 	protected function store()
 	{
 		// rebuild the keys table
-		$this->reindex();
-		//---------------------
-		if (($handle = fopen($this->_origin, "w")) !== FALSE)
-		{
-			fputcsv($handle, $this->_fields);
-			foreach ($this->_data as $key => $record)
-				fputcsv($handle, array_values((array) $record));
-			fclose($handle);
-		}
-		// --------------------
-	}
+        $this->reindex();
+
+        $rootName = $this->_entity . 's';
+
+
+        $document = new SimpleXMLElement("<$rootName></$rootName>");;
+
+		foreach ($this -> _data as $records) {
+            $item = $document->addChild ($this->_entity);
+			foreach (array_keys((array) $records) as $value) {
+                $element = $item->addChild ($value, $records -> $value);
+            }
+            // Header('Content-type: text/xml');
+            // var_dump ($document->asXML($this->_origin));
+            // var_dump ($document);
+            // var_dump ($document);
+            $document->asXML($this->_origin);
+        }
+    }
 
 }
