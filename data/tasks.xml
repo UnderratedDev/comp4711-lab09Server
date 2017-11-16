@@ -7,6 +7,7 @@
         <group>2</group>
         <deadline>20170219</deadline>
         <status>2</status>
+        <flag></flag>
     </task>
     <task>
         <id>2</id>
@@ -14,7 +15,9 @@
         <priority>2</priority>
         <size>2</size>
         <group>1</group>
+        <deadline></deadline>
         <status>2</status>
+        <flag></flag>
     </task>
     <task>
         <id>3</id>
@@ -22,6 +25,9 @@
         <priority>2</priority>
         <size>2</size>
         <group>1</group>
+        <deadline></deadline>
+        <status></status>
+        <flag></flag>
     </task>
     <task>
         <id>4</id>
@@ -29,6 +35,9 @@
         <priority>1</priority>
         <size>2</size>
         <group>1</group>
+        <deadline></deadline>
+        <status></status>
+        <flag></flag>
     </task>
     <task>
         <id>6</id>
@@ -36,6 +45,9 @@
         <priority>1</priority>
         <size>2</size>
         <group>4</group>
+        <deadline></deadline>
+        <status></status>
+        <flag></flag>
     </task>
     <task>
         <id>7</id>
@@ -44,5 +56,7 @@
         <size>3</size>
         <group>4</group>
         <deadline>20170305</deadline>
+        <status></status>
+        <flag></flag>
     </task>
 </tasks>
