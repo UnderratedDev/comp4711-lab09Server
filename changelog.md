@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
+## - YR
+### Added
+- XML Model
+- Load function in XML Model
+
 ## - SC
 ### Added
 - converted some tasks to xml
