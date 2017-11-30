@@ -17,22 +17,9 @@ class Welcome extends Application
 	 * map to /welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	
 	public function index()
 	{
-		$tasks = $this->tasks->all ();
-
-		$count = 0;
-		foreach (array_reverse ($tasks) as $task) {
-			$task -> priority = $this->app->priority ($task -> priority);
-			$display_tasks[] = (array) $task;
-			if (++$count >= 5)
-				break;
-		}
-		$this->data['display_tasks'] = $display_tasks;
-		$this->data['remaining_tasks'] = $count;
-		$this->data['pagebody'] = 'homepage';
-		$this->render(); 
+		$this->load->view('homepage'); 
 	}
 
 }
