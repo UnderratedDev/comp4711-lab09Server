@@ -142,7 +142,6 @@ class Curl {
         $this->options($options);
 
         $this->http_method('delete');
-
         $this->option(CURLOPT_POSTFIELDS, $params);
     }
 
